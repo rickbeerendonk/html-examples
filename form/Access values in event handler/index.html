@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2017 Rick Beerendonk -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form - Access values in event handler</title>
+</head>
+
+<body>
+    <script>
+        function doSubmit(event) {
+            // Prevent the default submit action.
+            event.preventDefault();
+
+            // Display the form values (using only event info to access form values).
+            const target = document.getElementById("products");
+            const form = event.target;
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `${form.elements['product'].value} costs $${form.elements['price'].value}`;
+            target.appendChild(listItem);
+        }
+    </script>
+
+    <form action="" onsubmit="doSubmit(event)">
+        <label for="product">Product: </label>
+        <input id="product" name="product" type="text" />
+
+        <label for="price">Price in USD: </label>
+        <input id="price" name="price" type="text" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="submitted">
+        Submitted products:
+        <ul id="products"></ul>
+    </p>
+</body>
+
+</html>
