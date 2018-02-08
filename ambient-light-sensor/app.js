@@ -22,15 +22,13 @@ chrome://flags/#enable-generic-sensor
 
 try {
   const sensor = new AmbientLightSensor();
-  sensor.start();
-
   sensor.onreading = function(event) {
     console.log(sensor.illuminance);
-  };
-  
+  };  
   sensor.onerror = function(event) {
     console.log(event.error.name, event.error.message);
   };
+  sensor.start();
 } catch (e) {
   document.writeln(e.message);
 }
