@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events - Mouse - relatedTarget</title>
+
+    <style>
+        div {
+            height: 128px;
+            width: 128px;
+        }
+
+        #top {
+            background-color: red;
+        }
+
+        #bottom {
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        function outListener(event) {
+            console.log(`Exited ${event.target.id || 'body'} for ${event.relatedTarget.id || 'body'}`);
+        }
+
+        function overListener(event) {
+            console.log(`Entered ${event.target.id || 'body'} from ${event.relatedTarget.id || 'body'}`);
+        }
+
+        function loadListener() {
+            document.body.addEventListener("mouseover", overListener, true);
+            document.body.addEventListener("mouseout", outListener, true);
+        }
+    </script>
+
+</head>
+
+<body onload="loadListener();">
+    <div id="top"></div>
+    <div id="bottom"></div>
+</body>
+
+</html>
