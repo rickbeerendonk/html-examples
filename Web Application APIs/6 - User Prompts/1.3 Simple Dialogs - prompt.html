@@ -10,16 +10,16 @@
     <title>Web Application APIs - User Prompts - Simple Dialogs - confirm</title>
 
     <script>
-        function showConfirm() {
-            const msg = 'Do you agree?';
-            const answer = window.confirm(msg);
+        function showPrompt() {
+            const msg = 'What is the answer to this question?';
+            const answer = window.prompt(msg);
             document.getElementById('answer').innerText = `The answer is: ${answer}`;
         }
     </script>
 </head>
 
 <body>
-    <button onclick="showConfirm()">Show confirm</button>
+    <button onclick="showPrompt()">Show prompt</button>
     <p id="answer"></p>
 </body>
 
