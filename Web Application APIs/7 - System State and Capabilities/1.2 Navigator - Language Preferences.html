@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Application APIs - System State and Capabilities - Navigator - Language Preferences</title>
+</head>
+
+<body>
+    <p>Preferred Language:
+        <span id="preferred-language"></span>
+    </p>
+    <p>Preferred Languages (in order of preference):
+        <ol id="preferred-languages"></ol>
+    </p>
+
+    <script>
+        const preferredLanguage = document.getElementById('preferred-language');
+        const preferredLanguages = document.getElementById('preferred-languages');
+
+        preferredLanguage.innerText = window.navigator.language;
+        for (const language of window.navigator.languages) {
+            let li = document.createElement('li');
+            li.innerText = language;
+            preferredLanguages.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
