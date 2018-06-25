@@ -10,4 +10,6 @@ Examples of HTML elements and attributes.
 
 Mozilla Public License Version 2.0
 
+---
+
 Copyright © 2017-2018 Rick Beerendonk
