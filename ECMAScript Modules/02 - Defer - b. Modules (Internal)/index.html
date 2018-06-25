@@ -7,11 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ECMAScript Modules - Defer - No Modules</title>
+    <title>ECMAScript Modules - Defer - Modules (Internal)</title>
 
-    <!-- Defer delays execution until document has finished parsing. -->
-    <script src="file1.js" defer></script>
-    <script src="file2.js"></script>
+    <!-- Modules are like defer. -->
+    <script type="module">
+        console.log('1st script: Module');
+    </script>
+
+    <script>
+        console.log('2rd script');
+    </script>
 </head>
 
 <body>

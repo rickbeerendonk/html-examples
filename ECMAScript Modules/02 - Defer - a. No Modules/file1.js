@@ -1,1 +1,1 @@
-console.log('From file1.js');
+console.log('From file1.js (defer)');
