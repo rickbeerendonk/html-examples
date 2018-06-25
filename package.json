@@ -1,0 +1,21 @@
+{
+  "name": "html-examples",
+  "version": "0.1.0",
+  "description": "Examples for HTML.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/html-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rickbeerendonk/html-examples/issues"
+  },
+  "homepage": "https://github.com/rickbeerendonk/html-examples#readme",
+  "dependencies": {
+    "http-server": "0.11.1"
+  },
+  "scripts": {
+    "openserver": "node ./node_modules/http-server/bin/http-server -c-1"
+  }
+}
