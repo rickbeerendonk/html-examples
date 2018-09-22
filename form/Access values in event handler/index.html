@@ -15,11 +15,14 @@
             // Prevent the default submit action.
             event.preventDefault();
 
-            // Display the form values (using only event info to access form values).
-            const target = document.getElementById("products");
+            // Get the form values (using only event info to access form values).
             const form = event.target;
-            const listItem = document.createElement("li");
-            listItem.innerHTML = `${form.elements['product'].value} costs $${form.elements['price'].value}`;
+            const productInfo = `${form.elements['product'].value} costs $${form.elements['price'].value}`;
+
+            // Display the form values
+            const target = document.getElementById('products');
+            const listItem = document.createElement('li');
+            listItem.innerHTML = productInfo;
             target.appendChild(listItem);
         }
     </script>
