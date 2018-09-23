@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form - Validation</title>
+</head>
+
+<body>
+    <script>
+        function doSubmit(event) {
+            // Prevent the default submit action.
+            event.preventDefault();
+
+            // Get the form values (using only event info to access form values).
+            const form = event.target;
+            let productInfo = `${form.elements['product'].value} costs $${form.elements['price'].value}.`;
+            if (form.elements['stock'].value) {
+                productInfo += ` Stock: ${form.elements['stock'].value}.`;
+            }
+
+            // Clear the form:
+            form.reset();
+
+            // Display the form values
+            const target = document.getElementById('products');
+            const listItem = document.createElement('li');
+            listItem.innerHTML = productInfo;
+            target.appendChild(listItem);
+        }
+    </script>
+
+    <style>
+        input:required {
+            border-color: blue;
+            border-style: dotted;
+        }
+
+        input:invalid {
+            background: lightcoral;
+        }
+    </style>
+
+    <form action="" onsubmit="doSubmit(event)">
+        <div>
+            <label for="product">Product: </label>
+            <input id="product" name="product" type="text" required minlength="3" />
+        </div>
+
+        <div>
+            <label for="price">Price in USD: </label>
+            <input id="price" name="price" type="text" required />
+        </div>
+
+        <div>
+            <label for="stock">Stock: </label>
+            <input id="stock" name="stock" type="number" />
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="submitted">
+        Submitted products:
+        <ul id="products"></ul>
+    </p>
+</body>
+
+</html>
