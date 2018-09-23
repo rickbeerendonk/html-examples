@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Application APIs - Animation Frames</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script>
+        let animationFrameIdentifier = null;
+
+        function toggleStroboscope() {
+            if (animationFrameIdentifier) {
+                cancelAnimationFrame(animationFrameIdentifier);
+                animationFrameIdentifier = null;
+            } else {
+                animationFrameIdentifier = requestAnimationFrame(toggleLight);
+            }
+        }
+
+        function toggleLight() {
+            elem = document.querySelector('body');
+            elem.classList.toggle('dark');
+            animationFrameIdentifier = requestAnimationFrame(toggleLight);
+        }
+    </script>
+</head>
+
+<body onclick="toggleStroboscope()">
+    <p>
+        WARNING: Clicking this page starts and stops a Stroboscope.
+    </p>
+</body>
+
+</html>

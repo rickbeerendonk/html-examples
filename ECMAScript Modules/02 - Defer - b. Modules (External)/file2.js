@@ -1,0 +1,1 @@
+console.log('From file2.js (defer)');

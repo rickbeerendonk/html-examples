@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Application APIs - System State and Capabilities - Navigator - Client Identification</title>
+</head>
+
+<body>
+    <header>Client should limit the info to prevent user identification.</header>
+    <br>
+    <main></main>
+
+    <script>
+        const main = document.querySelector('main');
+        main.innerText = `appCodeName: ${window.navigator.appCodeName}
+appName: ${window.navigator.appName}
+appVersion: ${window.navigator.appVersion}
+platform: ${window.navigator.platform}
+product: ${window.navigator.product}
+userAgent: ${window.navigator.userAgent}`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECMAScript Modules - Import Export</title>
+</head>
+
+<body>
+    <script type="module">
+        // This example must be run through a web server (and not from the file system)
+
+        import { echoUpperCase } from './utils.mjs';
+
+        document.body.innerText = echoUpperCase('This text has been adjusted by a function in a module.');
+    </script>
+</body>
+
+</html>
