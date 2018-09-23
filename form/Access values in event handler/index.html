@@ -18,6 +18,7 @@
             // Get the form values (using only event info to access form values).
             const form = event.target;
             const productInfo = `${form.elements['product'].value} costs $${form.elements['price'].value}`;
+            form.reset();
 
             // Display the form values
             const target = document.getElementById('products');
