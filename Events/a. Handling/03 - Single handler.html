@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events - Single handler</title>
+
+    <script>
+        function mouseOver(event /* MouseEvent */) {
+            event.target.style.color = 'red';
+        }
+
+        function mouseOut(event /* MouseEvent */) {
+            event.target.style.color = 'black'
+        }
+
+        function ready() {
+            const divElem = document.querySelector('div');
+            divElem.onmouseover = mouseOver;
+            divElem.onmouseout = mouseOut;
+        }
+    </script>
+</head>
+<body onload="ready()">
+    <div>Hello</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events - Stop Propagation</title>
+
+    <style>
+        div {
+            padding: 20px;
+        }
+
+        #parent {
+            background: purple;
+            color: white;
+        }
+
+        #child {
+            background: lightgreen;
+            color: black;
+        }
+    </style>
+
+    <script>
+        function ready() {
+            const parent = document.getElementById('parent');
+            const child = document.getElementById('child');
+
+            parent.addEventListener('click', (event) => {
+                console.log(`${event.currentTarget.id} received event for ${event.target.id} in capturing fase.`);
+                //event.stopPropagation();
+            }, true /* capturing fase */);
+
+            child.addEventListener('click', (event) => {
+                console.log(`${event.target.id} received event (1st handler).`);
+                event.stopPropagation();
+            } /* no 3rd parameter: target fase */);
+
+            child.addEventListener('click', (event) => {
+                console.log(`${event.target.id} received event (2nd handler).`);
+            } /* no 3rd parameter: target fase */);
+
+            parent.addEventListener('click', (event) => {
+                console.log(`${event.currentTarget.id} received event for ${event.target.id} in bubbling fase.`);
+            }, false /* bubbling fase */);
+        }
+    </script>
+</head>
+
+<body onload="ready()">
+    <div id="parent">
+        Parent
+        <div id="child">Child</div>
+    </div>
+</body>
+
+</html>
