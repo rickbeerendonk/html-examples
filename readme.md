@@ -6,10 +6,10 @@ Examples of HTML elements and attributes.
 
 * https://www.w3.org/TR/
 
-# Licence
+## Licence
 
-Mozilla Public License Version 2.0
+European Union Public Licence version 1.2
 
----
+## Copyright
 
-Copyright © 2017-2019 Rick Beerendonk
+Copyright © 2014-2019 Rick Beerendonk

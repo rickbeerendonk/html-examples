@@ -20,6 +20,10 @@
 
 * [chrome://flags/#enable-generic-sensor](chrome://flags/#enable-generic-sensor)
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2017 Rick Beerendonk

@@ -12,6 +12,10 @@
 
 * https://developers.google.com/web/fundamentals/payments/
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018 Rick Beerendonk

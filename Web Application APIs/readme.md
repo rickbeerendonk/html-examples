@@ -9,6 +9,10 @@
 8. Images: https://www.w3.org/TR/html53/webappapis.html#webappapis-images
 9. Animation Frames: https://www.w3.org/TR/html53/webappapis.html#animation-frames
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018 Rick Beerendonk
