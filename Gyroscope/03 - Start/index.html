@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gyroscope - Start</title>
+  </head>
+  <body>
+    <script>
+      if (Gyroscope) {
+        switch (Gyroscope.permission) {
+          case 'granted':
+            document.writeln('Gyroscope permission already granted.');
+            break;
+          case 'denied':
+            document.writeln('Gyroscope permission already denied.');
+            break;
+          default:
+            navigator.permissions
+              .query({ name: 'gyroscope' })
+              .then(function(permissionStatus) {
+                document.writeln(
+                  `Gyroscope permission requested and received: ${
+                    permissionStatus.state
+                  }.`
+                );
+              });
+            break;
+        }
+
+        if (Gyroscope.permission) {
+          let gyroscope = new Gyroscope({ frequency: 60 });
+
+          gyroscope.addEventListener('reading', e => {
+            document.body.innerText = `Angular velocity along the X, Y and Z-axis (${
+              gyroscope.x
+            }, ${gyroscope.y}, ${gyroscope.z})`;
+          });
+          gyroscope.start();
+        }
+      } else {
+        document.writeln('No Gyroscope support in this browser.');
+      }
+    </script>
+  </body>
+</html>
