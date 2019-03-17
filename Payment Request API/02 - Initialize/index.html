@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Payment Request - Initialize</title>
+  </head>
+  <body>
+    <script>
+      if (window.PaymentRequest) {
+        let supportedInstruments = [
+          {
+            supportedMethods: 'basic-card',
+            data: {
+              supportedNetworks: ['amex', 'mastercard', 'visa'],
+              supportedTypes: ['debit', 'credit', 'prepaid']
+            }
+          }
+        ];
+
+        let details = {
+          total: {
+            label: 'Book (discounted)',
+            amount: { currency: 'EUR', value: '5.00' }
+          },
+          displayItems: [
+            {
+              label: 'Book',
+              amount: { currency: 'EUR', value: '10.00' }
+            },
+            {
+              label: 'Holiday Discount',
+              amount: { currency: 'EUR', value: '-5.00' }
+            }
+          ]
+        };
+
+        const paymentRequest = new PaymentRequest(
+          supportedInstruments,
+          details
+        );
+
+        console.log(paymentRequest);
+        document.writeln('paymentRequest.id: ', paymentRequest.id);
+      } else {
+        document.writeln('No Payment Request support in this browser.');
+      }
+    </script>
+  </body>
+</html>
