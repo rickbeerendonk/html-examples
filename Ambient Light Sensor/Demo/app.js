@@ -4,10 +4,10 @@
 try {
   const sensor = new AmbientLightSensor();
   sensor.onreading = function(event) {
-    console.log(sensor.illuminance);
+    document.writeln(sensor.illuminance);
   };  
   sensor.onerror = function(event) {
-    console.log(event.error.name, event.error.message);
+    document.writeln(event.error.name, event.error.message);
   };
   sensor.start();
 } catch (e) {
