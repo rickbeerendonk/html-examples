@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Share - Share</title>
+  </head>
+
+  <body>
+    <script>
+      function handleClick() {
+        if (!navigator.share) {
+          document.writeln('No share support in this browser.');
+        }
+
+        navigator
+          .share({
+            title: 'Oblicum',
+            text: 'The Oblicum Website',
+            url: 'https://oblicum.com'
+          })
+          .then(() => document.writeln('Data was shared successfully'))
+          .catch(err => document.writeln('Share failed:', err.message));
+      }
+    </script>
+
+    <button onclick="handleClick">Share Oblicum homepage</button>
+  </body>
+</html>
