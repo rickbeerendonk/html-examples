@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/rickbeerendonk/html-examples#readme",
   "dependencies": {
-    "http-server": "0.11.1"
+    "http-server": "0.12.0"
   },
   "scripts": {
     "openserver": "node ./node_modules/http-server/bin/http-server -c-1"
