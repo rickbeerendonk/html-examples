@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dialog - ::backdrop</title>
+
+    <style>
+      dialog::backdrop {
+        backdrop-filter: blur(2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="my-background"></div>
+    <dialog id="my-dialog">
+      <h1>Dialog</h1>
+      <p>Dialog content.</p>
+    </dialog>
+
+    <script>
+      // Background
+      const myBackground = document.getElementById("my-background");
+      myBackground.innerHTML = '<a href="http://oblicum.com">oblicum</a> '.repeat(
+        2000
+      );
+
+      // Dialog
+      const myDialog = document.getElementById("my-dialog");
+      setTimeout(() => myDialog.showModal(), 1000);
+    </script>
+  </body>
+</html>
