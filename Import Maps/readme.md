@@ -2,20 +2,20 @@
 
 ## Specification
 
-* https://wicg.github.io/import-maps/
-* https://github.com/WICG/import-maps
+- https://wicg.github.io/import-maps/
+- https://github.com/WICG/import-maps
 
 ## Polyfill
 
-* https://github.com/WICG/import-maps#community-polyfills-and-tooling
+- https://github.com/WICG/import-maps#community-polyfills-and-tooling
 
 ## Vlog
 
-* https://www.youtube.com/watch?v=yOcgGSCrn-c
+- https://www.youtube.com/watch?v=yOcgGSCrn-c
 
 ## Platform Status
 
-* Chrome: https://chromestatus.com/feature/5315286962012160
+- Chrome: https://chromestatus.com/feature/5315286962012160
 
 ## License
 

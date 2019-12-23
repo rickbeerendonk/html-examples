@@ -2,24 +2,24 @@
 
 ## Specification
 
-* https://wicg.github.io/ResizeObserver/
-* Explainer doc: https://github.com/WICG/ResizeObserver/blob/master/explainer.md
+- https://wicg.github.io/ResizeObserver/
+- Explainer doc: https://github.com/WICG/ResizeObserver/blob/master/explainer.md
 
 ## Polyfill
 
-* https://github.com/que-etc/resize-observer-polyfill
+- https://github.com/que-etc/resize-observer-polyfill
 
 ## Documentation
 
-* https://developer.mozilla.org/en-US/docs/Web/API/Resize_Observer_API
+- https://developer.mozilla.org/en-US/docs/Web/API/Resize_Observer_API
 
 ## Blog
 
-* https://developers.google.com/web/updates/2016/10/resizeobserver
+- https://developers.google.com/web/updates/2016/10/resizeobserver
 
 ## Can I Use
 
-* https://caniuse.com/#feat=resizeobserver
+- https://caniuse.com/#feat=resizeobserver
 
 ## License
 

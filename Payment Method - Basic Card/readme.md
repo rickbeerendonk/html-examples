@@ -2,7 +2,7 @@
 
 ## Specificiation
 
-* https://w3c.github.io/payment-method-basic-card/
+- https://w3c.github.io/payment-method-basic-card/
 
 ## License
 

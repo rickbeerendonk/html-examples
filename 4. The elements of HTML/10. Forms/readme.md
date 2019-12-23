@@ -2,7 +2,7 @@
 
 ## Specification
 
-* https://www.w3.org/TR/html/sec-forms.html
+- https://www.w3.org/TR/html/sec-forms.html
 
 ## License
 

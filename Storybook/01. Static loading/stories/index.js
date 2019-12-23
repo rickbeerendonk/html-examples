@@ -3,8 +3,7 @@ import { action } from '@storybook/addon-actions';
 
 /* global module */
 
-storiesOf('h1', module)
-  .add('default', () => '<h1>Hello HTML</h1>');
+storiesOf('h1', module).add('default', () => '<h1>Hello HTML</h1>');
 
 storiesOf('button', module)
   .add('default', () => {

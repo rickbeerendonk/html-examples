@@ -23,9 +23,7 @@
               .query({ name: 'gyroscope' })
               .then(function(permissionStatus) {
                 document.writeln(
-                  `Gyroscope permission requested and received: ${
-                    permissionStatus.state
-                  }.`
+                  `Gyroscope permission requested and received: ${permissionStatus.state}.`
                 );
               });
             break;
@@ -35,9 +33,7 @@
           let gyroscope = new Gyroscope({ frequency: 60 });
 
           gyroscope.addEventListener('reading', e => {
-            document.body.innerText = `Angular velocity along the X, Y and Z-axis (${
-              gyroscope.x
-            }, ${gyroscope.y}, ${gyroscope.z})`;
+            document.body.innerText = `Angular velocity along the X, Y and Z-axis (${gyroscope.x}, ${gyroscope.y}, ${gyroscope.z})`;
           });
           gyroscope.start();
         }

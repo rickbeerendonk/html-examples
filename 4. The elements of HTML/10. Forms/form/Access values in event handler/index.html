@@ -2,46 +2,45 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2017 Rick Beerendonk -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Form - Access values in event handler</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        function doSubmit(event) {
-            // Prevent the default submit action.
-            event.preventDefault();
+      function doSubmit(event) {
+        // Prevent the default submit action.
+        event.preventDefault();
 
-            // Get the form values (using only event info to access form values).
-            const form = event.target;
-            const productInfo = `${form.elements['product'].value} costs $${form.elements['price'].value}`;
-            form.reset();
+        // Get the form values (using only event info to access form values).
+        const form = event.target;
+        const productInfo = `${form.elements['product'].value} costs $${form.elements['price'].value}`;
+        form.reset();
 
-            // Display the form values
-            const target = document.getElementById('products');
-            const listItem = document.createElement('li');
-            listItem.innerHTML = productInfo;
-            target.appendChild(listItem);
-        }
+        // Display the form values
+        const target = document.getElementById('products');
+        const listItem = document.createElement('li');
+        listItem.innerHTML = productInfo;
+        target.appendChild(listItem);
+      }
     </script>
 
     <form action="" onsubmit="doSubmit(event)">
-        <label for="product">Product: </label>
-        <input id="product" name="product" type="text" />
+      <label for="product">Product: </label>
+      <input id="product" name="product" type="text" />
 
-        <label for="price">Price in USD: </label>
-        <input id="price" name="price" type="text" />
+      <label for="price">Price in USD: </label>
+      <input id="price" name="price" type="text" />
 
-        <button type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
 
-    <p id="submitted">
-        Submitted products:
-        <ul id="products"></ul>
-    </p>
-</body>
-
+    <div id="submitted">
+      <h2>Submitted products:</h2>
+      <ul id="products"></ul>
+    </div>
+  </body>
 </html>

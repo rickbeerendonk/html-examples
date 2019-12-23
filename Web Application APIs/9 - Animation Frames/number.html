@@ -2,49 +2,48 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web Application APIs - Animation Frames - Number</title>
 
     <style>
-        body {
-            background-color: white;
-            color: black;
-            height: 100vh;
-            width: 100vw;
-        }
+      body {
+        background-color: white;
+        color: black;
+        height: 100vh;
+        width: 100vw;
+      }
 
-        body.dark {
-            background-color: black;
-            color: white;
-        }
+      body.dark {
+        background-color: black;
+        color: white;
+      }
     </style>
 
     <script>
-        let animationFrameIdentifier = null;
-        let nr = 0;
-        let startTime;
-        let nrElem;
+      let animationFrameIdentifier = null;
+      let nr = 0;
+      let startTime;
+      let nrElem;
 
-        function start() {
-            nrElem = document.getElementById('number');
-            startTime = new Date();
-            animationFrameIdentifier = requestAnimationFrame(changeAndShowNumber());
-        }
+      function start() {
+        nrElem = document.getElementById('number');
+        startTime = new Date();
+        animationFrameIdentifier = requestAnimationFrame(changeAndShowNumber());
+      }
 
-        function changeAndShowNumber() {
-            nr++;
-            const running = (new Date() - startTime) / 1000;
-            nrElem.innerText = `${nr} (${nr / running} frames/second)`;
-            animationFrameIdentifier = requestAnimationFrame(changeAndShowNumber);
-        }
+      function changeAndShowNumber() {
+        nr++;
+        const running = (new Date() - startTime) / 1000;
+        nrElem.innerText = `${nr} (${nr / running} frames/second)`;
+        animationFrameIdentifier = requestAnimationFrame(changeAndShowNumber);
+      }
     </script>
-</head>
+  </head>
 
-<body onload="start()">
+  <body onload="start()">
     <h1 id="number"></h1>
-</body>
-
+  </body>
 </html>

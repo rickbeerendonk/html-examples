@@ -2,33 +2,33 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Events - Multiple handlers</title>
 
     <script>
-        function mouseOver(event /* MouseEvent */) {
-            event.target.style.color = 'red';
-        }
+      function mouseOver(event /* MouseEvent */) {
+        event.target.style.color = 'red';
+      }
 
-        function mouseOut(event /* MouseEvent */) {
-            event.target.style.color = 'black';
-        }
+      function mouseOut(event /* MouseEvent */) {
+        event.target.style.color = 'black';
+      }
 
-        function ready() {
-            const divElem = document.querySelector('div');
-            divElem.addEventListener('mouseover', mouseOver);
-            divElem.addEventListener('mouseout', mouseOut);
+      function ready() {
+        const divElem = document.querySelector('div');
+        divElem.addEventListener('mouseover', mouseOver);
+        divElem.addEventListener('mouseout', mouseOut);
 
-            //divElem.addEventListener('mouseout', () => { alert('hi'); });
+        //divElem.addEventListener('mouseout', () => { alert('hi'); });
 
-            //divElem.removeEventListener('mouseout', mouseOut);
-        }
+        //divElem.removeEventListener('mouseout', mouseOut);
+      }
     </script>
-</head>
-<body onload="ready()">
+  </head>
+  <body onload="ready()">
     <div>Hello</div>
-</body>
+  </body>
 </html>

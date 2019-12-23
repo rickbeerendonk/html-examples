@@ -1,27 +1,29 @@
-
 <!DOCTYPE html>
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web Application APIs - User Prompts - Simple Dialogs - prompt with default</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Web Application APIs - User Prompts - Simple Dialogs - prompt with default
+    </title>
 
     <script>
-        function showPrompt() {
-            const msg = 'What is the answer to this question?';
-            const defaultAnswer = 'I don\'t know what the answer is';
-            const answer = window.prompt(msg, defaultAnswer);
-            document.getElementById('answer').innerText = `The answer is: ${answer}`;
-        }
+      function showPrompt() {
+        const msg = 'What is the answer to this question?';
+        const defaultAnswer = "I don't know what the answer is";
+        const answer = window.prompt(msg, defaultAnswer);
+        document.getElementById(
+          'answer'
+        ).innerText = `The answer is: ${answer}`;
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <button onclick="showPrompt()">Show prompt</button>
     <p id="answer"></p>
-</body>
-
+  </body>
 </html>

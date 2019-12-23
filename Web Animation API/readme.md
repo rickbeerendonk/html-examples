@@ -2,23 +2,23 @@
 
 ## Specification
 
-* https://drafts.csswg.org/web-animations/
+- https://drafts.csswg.org/web-animations/
 
 ## Documentation
 
-* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
 
 ## Examples
 
-* https://mozdevs.github.io/Animation-examples/
+- https://mozdevs.github.io/Animation-examples/
 
 ## Polyfill
 
-* https://github.com/web-animations/web-animations-js
+- https://github.com/web-animations/web-animations-js
 
 ## Can I Use?
 
-* https://caniuse.com/#feat=web-animation
+- https://caniuse.com/#feat=web-animation
 
 ## License
 

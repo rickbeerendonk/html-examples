@@ -2,7 +2,7 @@
 
 ## Specification
 
-* https://www.w3.org/TR/html/semantics.html
+- https://www.w3.org/TR/html/semantics.html
 
 ## License
 

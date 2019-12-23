@@ -2,48 +2,51 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Events - Mouse - relatedTarget</title>
 
     <style>
-        div {
-            height: 128px;
-            width: 128px;
-        }
+      div {
+        height: 128px;
+        width: 128px;
+      }
 
-        #top {
-            background-color: red;
-        }
+      #top {
+        background-color: red;
+      }
 
-        #bottom {
-            background-color: blue;
-        }
+      #bottom {
+        background-color: blue;
+      }
     </style>
 
     <script>
-        function outListener(event) {
-            console.log(`Exited ${event.target.id || 'body'} for ${event.relatedTarget.id || 'body'}`);
-        }
+      function outListener(event) {
+        console.log(
+          `Exited ${event.target.id || 'body'} for ${event.relatedTarget.id ||
+            'body'}`
+        );
+      }
 
-        function overListener(event) {
-            console.log(`Entered ${event.target.id || 'body'} from ${event.relatedTarget.id || 'body'}`);
-        }
+      function overListener(event) {
+        console.log(
+          `Entered ${event.target.id || 'body'} from ${event.relatedTarget.id ||
+            'body'}`
+        );
+      }
 
-        function loadListener() {
-            document.body.addEventListener("mouseover", overListener, true);
-            document.body.addEventListener("mouseout", outListener, true);
-        }
+      function loadListener() {
+        document.body.addEventListener('mouseover', overListener, true);
+        document.body.addEventListener('mouseout', outListener, true);
+      }
     </script>
+  </head>
 
-</head>
-
-<body onload="loadListener();">
+  <body onload="loadListener();">
     <div id="top"></div>
     <div id="bottom"></div>
-</body>
-
+  </body>
 </html>

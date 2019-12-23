@@ -2,11 +2,11 @@
 
 ## Specification
 
-* https://wicg.github.io/web-share/#share-method
+- https://wicg.github.io/web-share/#share-method
 
 ## Documentation
 
-* https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
+- https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
 
 ## License
 

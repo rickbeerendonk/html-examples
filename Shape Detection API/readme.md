@@ -2,7 +2,7 @@
 
 ## Specification
 
-* https://wicg.github.io/shape-detection-api/
+- https://wicg.github.io/shape-detection-api/
 
 ## License
 

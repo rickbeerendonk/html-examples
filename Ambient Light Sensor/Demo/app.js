@@ -5,7 +5,7 @@ try {
   const sensor = new AmbientLightSensor();
   sensor.onreading = function(event) {
     document.writeln(sensor.illuminance);
-  };  
+  };
   sensor.onerror = function(event) {
     document.writeln(event.error.name, event.error.message);
   };

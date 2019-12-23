@@ -2,15 +2,15 @@
 
 ## Specification
 
-* https://www.w3.org/TR/payment-request/
+- https://www.w3.org/TR/payment-request/
 
 ## Documentation
 
-* https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest
+- https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest
 
 ## Blogs
 
-* https://developers.google.com/web/fundamentals/payments/
+- https://developers.google.com/web/fundamentals/payments/
 
 ## License
 

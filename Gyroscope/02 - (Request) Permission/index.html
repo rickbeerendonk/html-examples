@@ -23,9 +23,7 @@
               .query({ name: 'gyroscope' })
               .then(function(permissionStatus) {
                 document.writeln(
-                  `Gyroscope permission requested and received: ${
-                    permissionStatus.state
-                  }.`
+                  `Gyroscope permission requested and received: ${permissionStatus.state}.`
                 );
               });
             break;

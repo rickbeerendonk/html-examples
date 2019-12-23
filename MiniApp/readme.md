@@ -2,7 +2,7 @@
 
 ## Specification
 
-* https://www.w3.org/TR/mini-app-white-paper/
+- https://www.w3.org/TR/mini-app-white-paper/
 
 ## License
 

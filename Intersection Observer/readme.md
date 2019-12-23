@@ -2,12 +2,12 @@
 
 ## Specification
 
-* https://www.w3.org/TR/intersection-observer/
+- https://www.w3.org/TR/intersection-observer/
 
 ## Documentation
 
-* https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
-* https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+- https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
+- https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
 ## License
 

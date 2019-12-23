@@ -2,35 +2,35 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Elements - Progress</title>
 
     <style>
-        .square {
-            height: 30px;
-            width: 30px;
-        }
+      .square {
+        height: 30px;
+        width: 30px;
+      }
 
-        .vertical {
-            height: 100px;
-            width: 10px;
-        }
+      .vertical {
+        height: 100px;
+        width: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     Progress without attributes:
     <progress></progress>
-    <br>
+    <br />
     Progress with value 30 and maximum 100:
     <progress value="30" max="100"></progress>
-    <br>
+    <br />
     Should be a circle:
     <progress value="30" max="100" class="square"></progress>
-    <br>
+    <br />
     Should be vertical:
     <progress value="30" max="100" class="vertical"></progress>
-</body>
+  </body>
 </html>

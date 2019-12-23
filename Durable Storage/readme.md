@@ -2,15 +2,15 @@
 
 ## Specification
 
-* https://storage.spec.whatwg.org/
+- https://storage.spec.whatwg.org/
 
 ## Documentation
 
-* https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage
+- https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage
 
 ## Blog
 
-* https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+- https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
 
 ## License
 

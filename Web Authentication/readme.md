@@ -2,7 +2,7 @@
 
 ## Specification
 
-* https://www.w3.org/TR/webauthn/
+- https://www.w3.org/TR/webauthn/
 
 ## License
 
