@@ -13,6 +13,13 @@ npm-debug.log
 package-lock.json
 
 #################
+## yarn
+#################
+
+yarn.lock
+yarn-error.log
+
+#################
 ## bower
 #################
 
