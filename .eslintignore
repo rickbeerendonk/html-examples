@@ -1,0 +1,4 @@
+**/build/**
+**/build-storybook/**
+**/lib/**
+**/node_modules/**
