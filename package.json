@@ -32,6 +32,6 @@
     "prettier": "1.19.1"
   },
   "dependencies": {
-    "husky": "4.0.5"
+    "husky": "4.0.7"
   }
 }
