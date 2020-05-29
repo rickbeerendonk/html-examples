@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog - JavaScript</title>
+  </head>
+  <body>
+    <button id="open">Open</button>
+    <dialog id="my-dialog">
+      <h1>Dialog</h1>
+      <button id="close">Close</button>
+    </dialog>
+
+    <script>
+      const dialog = document.querySelector('dialog');
+      document
+        .querySelector('#open')
+        .addEventListener('click', () => dialog.showModal());
+      document
+        .querySelector('#close')
+        .addEventListener('click', () => dialog.close());
+    </script>
+  </body>
+</html>
