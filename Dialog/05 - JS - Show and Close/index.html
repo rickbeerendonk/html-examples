@@ -5,20 +5,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dialog - JavaScript</title>
+    <title>Dialog - JS - Show and Close</title>
   </head>
   <body>
-    <button id="open">Open</button>
+    <button id="show">Show</button>
     <dialog id="my-dialog">
-      <h1>Dialog</h1>
+      <h1>Dialog Title</h1>
       <button id="close">Close</button>
     </dialog>
 
     <script>
+      let i = 1;
       const dialog = document.querySelector('dialog');
-      document
-        .querySelector('#open')
-        .addEventListener('click', () => dialog.showModal());
+      const dialogTitle = document.querySelector('dialog > h1');
+
+      document.querySelector('#show').addEventListener('click', () => {
+        dialogTitle.innerHTML = `Dialog ${i++}`;
+        dialog.show();
+      });
+
       document
         .querySelector('#close')
         .addEventListener('click', () => dialog.close());
