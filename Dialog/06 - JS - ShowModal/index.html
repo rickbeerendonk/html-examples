@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog - JS - ShowModal and Close</title>
+  </head>
+  <body>
+    <button id="show-modal">Show Modal</button>
+    <dialog id="my-dialog">
+      <h1>Dialog Title</h1>
+      <button id="close">Close</button>
+    </dialog>
+
+    <script>
+      let i = 1;
+      const dialog = document.querySelector('dialog');
+      const dialogTitle = document.querySelector('dialog > h1');
+
+      document.querySelector('#show-modal').addEventListener('click', () => {
+        dialogTitle.innerHTML = `Dialog ${i++}`;
+        dialog.showModal();
+      });
+
+      document
+        .querySelector('#close')
+        .addEventListener('click', () => dialog.close());
+    </script>
+  </body>
+</html>
