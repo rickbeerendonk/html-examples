@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog - JS - Open</title>
+  </head>
+  <body>
+    <button id="show-modal">Show Modal</button>
+    <div id="status"></div>
+    <dialog id="my-dialog">
+      <h1>Dialog Title</h1>
+      <button id="close">Close</button>
+    </dialog>
+
+    <script>
+      const dialog = document.querySelector('dialog');
+      const statusDiv = document.querySelector('#status');
+
+      document.querySelector('#show-modal').addEventListener('click', () => {
+        dialog.showModal();
+      });
+
+      document
+        .querySelector('#close')
+        .addEventListener('click', () => dialog.close());
+
+      setInterval(() => {
+        statusDiv.innerHTML = dialog.open
+          ? 'Dialog is open'
+          : 'Dialog is closed';
+      }, 100);
+    </script>
+  </body>
+</html>
