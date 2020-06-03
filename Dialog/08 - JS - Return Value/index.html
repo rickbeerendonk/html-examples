@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog - JS - Return Value</title>
+  </head>
+  <body>
+    <button id="show-modal">Show Modal</button>
+    <div id="status"></div>
+    <dialog id="my-dialog">
+      <h1>Dialog Title</h1>
+      <button id="close1">Close 1</button>
+      <button id="close2">Close 2</button>
+    </dialog>
+
+    <script>
+      const dialog = document.querySelector('dialog');
+      const statusDiv = document.querySelector('#status');
+
+      document.querySelector('#show-modal').addEventListener('click', () => {
+        dialog.showModal();
+      });
+
+      document
+        .querySelector('#my-dialog')
+        .addEventListener('close', e =>
+          console.log('Dialog closed by button #', e.target.returnValue)
+        );
+
+      document
+        .querySelector('#close1')
+        .addEventListener('click', () => dialog.close(1 /* Return Value */));
+      document
+        .querySelector('#close2')
+        .addEventListener('click', () => dialog.close(2 /* Return Value */));
+
+      setInterval(() => {
+        statusDiv.innerHTML = dialog.open
+          ? 'Dialog is open'
+          : 'Dialog is closed';
+      }, 100);
+    </script>
+  </body>
+</html>
