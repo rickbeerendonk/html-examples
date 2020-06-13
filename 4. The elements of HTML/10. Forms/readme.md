@@ -3,6 +3,7 @@
 ## Specification
 
 - https://www.w3.org/TR/html/sec-forms.html
+- https://html.spec.whatwg.org/multipage/forms.html#forms
 
 ## License
 

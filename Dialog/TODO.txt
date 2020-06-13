@@ -1,3 +1,0 @@
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#Usage_notes
-https://kyusuf.com/post/a-brief-look-at-html-dialog
-https://caniuse.com/#search=dialog
