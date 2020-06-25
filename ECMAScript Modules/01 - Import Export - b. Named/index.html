@@ -13,21 +13,11 @@
     <script type="module">
       // This example must be run through a web server (and not from the file system)
 
-      function handleClick() {
-        import('./utils.mjs').then(module => {
-          document.body.insertAdjacentHTML(
-            'afterbegin',
-            module.echoUpperCase(
-              'This text has been adjusted by a function in a module.'
-            )
-          );
-        });
-      }
+      import { echoUpperCase } from './utils.mjs';
 
-      const btn = document.querySelector('button');
-      btn.onclick = handleClick;
+      document.body.innerText = echoUpperCase(
+        'This text has been adjusted by a function in a module.'
+      );
     </script>
-
-    <button>Lazy load echo</button>
   </body>
 </html>

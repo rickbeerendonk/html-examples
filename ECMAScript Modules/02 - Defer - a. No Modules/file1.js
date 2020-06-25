@@ -2,3 +2,5 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 console.log('From file1.js (defer)');
+
+console.log(document.querySelector('h1'));
