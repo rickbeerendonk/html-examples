@@ -33,10 +33,10 @@
           'click',
           event => {
             console.log(
-              `${event.currentTarget.id} received event for ${event.target.id} in capturing fase.`
+              `${event.currentTarget.id} received event for ${event.target.id} in capturing phase.`
             );
           },
-          true /* capturing fase */
+          true /* capturing phase */
         );
 
         child.addEventListener(
@@ -44,24 +44,24 @@
           event => {
             console.log(`${event.target.id} received event (1st handler).`);
             event.stopImmediatePropagation();
-          } /* no 3rd parameter: target fase */
+          } /* no 3rd parameter: target phase */
         );
 
         child.addEventListener(
           'click',
           event => {
             console.log(`${event.target.id} received event (2nd handler).`);
-          } /* no 3rd parameter: target fase */
+          } /* no 3rd parameter: target phase */
         );
 
         parent.addEventListener(
           'click',
           event => {
             console.log(
-              `${event.currentTarget.id} received event for ${event.target.id} in bubbling fase.`
+              `${event.currentTarget.id} received event for ${event.target.id} in bubbling phase.`
             );
           },
-          false /* bubbling fase */
+          false /* bubbling phase */
         );
       }
     </script>
