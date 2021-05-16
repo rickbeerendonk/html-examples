@@ -30,7 +30,7 @@
         }
 
         if (Gyroscope.permission) {
-          let gyroscope = new Gyroscope({ frequency: 60 });
+          const gyroscope = new Gyroscope({ frequency: 60 });
 
           gyroscope.addEventListener('reading', e => {
             document.body.innerText = `Angular velocity along the X, Y and Z-axis (${gyroscope.x}, ${gyroscope.y}, ${gyroscope.z})`;
