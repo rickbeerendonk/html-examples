@@ -12,10 +12,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs
 
 https://web.dev/generic-sensor/
 
-## DevTools
-
-https://developer.chrome.com/docs/devtools/device-mode/orientation/
-
 ## Licence
 
 European Union Public Licence version 1.2
