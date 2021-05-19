@@ -10,10 +10,19 @@
   </head>
   <body>
     <script>
+      function startGyroscope() {
+        const gyroscope = new Gyroscope({ frequency: 60 });
+        gyroscope.addEventListener('reading', e => {
+          document.body.innerText = `Angular velocity along the X, Y and Z-axis (${gyroscope.x}, ${gyroscope.y}, ${gyroscope.z})`;
+        });
+        gyroscope.start();
+      }
+
       if (Gyroscope) {
         switch (Gyroscope.permission) {
           case 'granted':
             document.writeln('Gyroscope permission already granted.');
+            startGyroscope();
             break;
           case 'denied':
             document.writeln('Gyroscope permission already denied.');
@@ -25,17 +34,9 @@
                 document.writeln(
                   `Gyroscope permission requested and received: ${permissionStatus.state}.`
                 );
+                startGyroscope();
               });
             break;
-        }
-
-        if (Gyroscope.permission) {
-          const gyroscope = new Gyroscope({ frequency: 60 });
-
-          gyroscope.addEventListener('reading', e => {
-            document.body.innerText = `Angular velocity along the X, Y and Z-axis (${gyroscope.x}, ${gyroscope.y}, ${gyroscope.z})`;
-          });
-          gyroscope.start();
         }
       } else {
         document.writeln('No Gyroscope support in this browser.');
