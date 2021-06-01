@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2021 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shape Detection API - Barcode - Supported Formats</title>
+  </head>
+
+  <body>
+    <ul></ul>
+    <script>
+      if ('BarcodeDetector' in window) {
+        const ul = document.querySelector('ul');
+
+        // check supported types
+        BarcodeDetector.getSupportedFormats()
+          .then(formats => formats.forEach(format => ul.innerHTML += `<li>${format}</li>`));
+      }
+    </script>
+  </body>
+</html>
