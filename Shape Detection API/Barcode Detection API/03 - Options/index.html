@@ -6,19 +6,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Shape Detection API - Barcode - Supported Formats</title>
+    <title>Shape Detection API - Barcode - Options</title>
   </head>
 
   <body>
     <ul></ul>
     <script>
-      if ('BarcodeDetector' in window) {
-        const ul = document.querySelector('ul');
-
-        // Check supported types
-        BarcodeDetector.getSupportedFormats()
-          .then(formats => formats.forEach(format => ul.innerHTML += `<li>${format}</li>`));
-      }
+        // Create with specific formats
+        const barcodeDetector = new BarcodeDetector({formats: ['ean_13', 'qr_code']});
     </script>
   </body>
 </html>
