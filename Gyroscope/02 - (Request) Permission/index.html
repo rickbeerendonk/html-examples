@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Gyroscope - (Request) Permission</title>
-  </head>
-  <body>
-    <script>
+    <script defer>
       if (Gyroscope) {
         switch (Gyroscope.permission) {
           case 'granted':
@@ -32,5 +30,6 @@
         document.writeln('No Gyroscope support in this browser.');
       }
     </script>
-  </body>
+  </head>
+  <body></body>
 </html>
