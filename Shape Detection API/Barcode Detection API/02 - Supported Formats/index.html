@@ -16,8 +16,9 @@
         const ul = document.querySelector('ul');
 
         // Check supported types
-        BarcodeDetector.getSupportedFormats()
-          .then(formats => formats.forEach(format => ul.innerHTML += `<li>${format}</li>`));
+        BarcodeDetector.getSupportedFormats().then(formats =>
+          formats.forEach(format => (ul.innerHTML += `<li>${format}</li>`))
+        );
       }
     </script>
   </body>
