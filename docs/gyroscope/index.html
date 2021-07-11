@@ -26,6 +26,7 @@
             document.writeln('Gyroscope permission already denied.');
             break;
           default:
+            document.writeln('Gyroscope permission...');
             navigator.permissions
               .query({ name: 'gyroscope' })
               .then(function(permissionStatus) {
