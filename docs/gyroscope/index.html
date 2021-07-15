@@ -11,9 +11,10 @@
       function startGyroscope() {
         const gyroscope = new Gyroscope({ frequency: 60 });
         gyroscope.addEventListener('reading', e => {
-          document.body.innerText = `Angular velocity along the X, Y and Z-axis (${gyroscope.x.toFixed(
-            2
-          )}, ${gyroscope.y.toFixed(2)}, ${gyroscope.z.toFixed(2)})`;
+          document.body.innerText = `Angular velocity along the axis:
+X: ${gyroscope.x.toFixed(3)}
+Y: ${gyroscope.y.toFixed(3)}
+Z: ${gyroscope.z.toFixed(3)}`;
         });
         gyroscope.start();
       }

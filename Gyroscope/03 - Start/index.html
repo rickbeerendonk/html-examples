@@ -11,7 +11,10 @@
       function startGyroscope() {
         const gyroscope = new Gyroscope({ frequency: 60 });
         gyroscope.addEventListener('reading', e => {
-          document.body.innerText = `Angular velocity along the X, Y and Z-axis (${gyroscope.x}, ${gyroscope.y}, ${gyroscope.z})`;
+          document.body.innerText = `Angular velocity along the axis:
+X: ${gyroscope.x.toFixed(3)}
+Y: ${gyroscope.y.toFixed(3)}
+Z: ${gyroscope.z.toFixed(3)}`;
         });
         gyroscope.start();
       }
@@ -26,6 +29,7 @@
             document.writeln('Gyroscope permission already denied.');
             break;
           default:
+            document.writeln('Gyroscope permission...');
             navigator.permissions
               .query({ name: 'gyroscope' })
               .then(function(permissionStatus) {
