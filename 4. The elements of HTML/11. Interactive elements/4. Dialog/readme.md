@@ -11,7 +11,6 @@ https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-elem
 
 ## Support
 
-- https://developer.microsoft.com/en-us/microsoft-edge/platform/status/dialogelementformodals/
 - https://caniuse.com/#feat=dialog
 
 ### Enable
