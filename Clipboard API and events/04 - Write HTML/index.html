@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- Copyright © 2026 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard API - Write HTML</title>
+  </head>
+
+  <body>
+    <h1>Clipboard API - Write HTML</h1>
+
+    <p>
+      Writes both a <code>text/html</code> and a
+      <code>text/plain</code> representation to the clipboard using
+      <code>ClipboardItem</code>. Paste into a rich-text editor (e.g. Google
+      Docs) to see the HTML version, or into a plain-text editor to see the
+      fallback.
+    </p>
+
+    <button onclick="copyHTML()">Copy as HTML</button>
+
+    <p id="status"></p>
+
+    <script>
+      async function copyHTML() {
+        const html = '<b>Hello</b>, <i>Clipboard</i>!';
+        const plain = 'Hello, Clipboard!';
+
+        const item = new ClipboardItem({
+          'text/html': new Blob([html], { type: 'text/html' }),
+          'text/plain': new Blob([plain], { type: 'text/plain' })
+        });
+
+        await navigator.clipboard.write([item]);
+        document.querySelector('#status').textContent =
+          'Copied HTML to clipboard.';
+      }
+    </script>
+  </body>
+</html>

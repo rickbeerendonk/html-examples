@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Copyright © 2026 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard API - Clipboard Events</title>
+  </head>
+
+  <body>
+    <h1>Clipboard API - Clipboard Events</h1>
+
+    <p>
+      Perform <strong>copy</strong>, <strong>cut</strong>, or
+      <strong>paste</strong> anywhere on this page.
+    </p>
+
+    <p>Some text you can select and copy: <em>Hello, Clipboard!</em></p>
+
+    <p><input type="text" value="Cut or copy me too" size="30" /></p>
+
+    <h2>Events</h2>
+    <ul id="log"></ul>
+
+    <script>
+      const log = document.querySelector('#log');
+
+      function addEntry(message) {
+        const item = document.createElement('li');
+        item.textContent = message;
+        log.prepend(item);
+      }
+
+      document.addEventListener('copy', (event) => {
+        const selection = document.getSelection().toString();
+        addEntry(`copy — "${selection}"`);
+      });
+
+      document.addEventListener('cut', (event) => {
+        const selection = document.getSelection().toString();
+        addEntry(`cut — "${selection}"`);
+      });
+
+      document.addEventListener('paste', (event) => {
+        const text = event.clipboardData.getData('text/plain');
+        addEntry(`paste — "${text}"`);
+      });
+    </script>
+  </body>
+</html>

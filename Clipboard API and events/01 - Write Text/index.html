@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- Copyright © 2026 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard API - Write Text</title>
+  </head>
+
+  <body>
+    <h1>Clipboard API - Write Text</h1>
+
+    <p>
+      <label for="text">Text to copy:</label><br />
+      <input id="text" type="text" value="Hello, Clipboard!" size="40" />
+    </p>
+
+    <button onclick="copyText()">Copy to Clipboard</button>
+
+    <p id="status"></p>
+
+    <script>
+      async function copyText() {
+        const text = document.querySelector('#text').value;
+        const status = document.querySelector('#status');
+
+        await navigator.clipboard.writeText(text);
+        status.textContent = `Copied: "${text}"`;
+      }
+    </script>
+  </body>
+</html>

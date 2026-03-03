@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- Copyright © 2026 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard API - Read Formats</title>
+  </head>
+
+  <body>
+    <h1>Clipboard API - Read Formats</h1>
+
+    <p>
+      Reads all available clipboard items and their MIME types using
+      <code>navigator.clipboard.read()</code>.
+    </p>
+
+    <button onclick="readFormats()">Read Clipboard</button>
+
+    <div id="output"></div>
+
+    <script>
+      async function readFormats() {
+        const output = document.querySelector('#output');
+        output.innerHTML = '';
+
+        const items = await navigator.clipboard.read();
+
+        for (const item of items) {
+          const section = document.createElement('section');
+          const heading = document.createElement('h2');
+          heading.textContent = `ClipboardItem (${item.types.join(', ')})`;
+          section.append(heading);
+
+          for (const type of item.types) {
+            const blob = await item.getType(type);
+            const text = await blob.text();
+
+            const h3 = document.createElement('h3');
+            h3.textContent = type;
+            const pre = document.createElement('pre');
+            pre.textContent = text;
+            section.append(h3, pre);
+          }
+
+          output.append(section);
+        }
+      }
+    </script>
+  </body>
+</html>

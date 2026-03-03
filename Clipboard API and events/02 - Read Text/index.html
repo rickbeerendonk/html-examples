@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- Copyright © 2026 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard API - Read Text</title>
+  </head>
+
+  <body>
+    <h1>Clipboard API - Read Text</h1>
+
+    <p>Copy some text (in this or another window), then click the button.</p>
+
+    <button onclick="pasteText()">Read from Clipboard</button>
+
+    <h2>Clipboard Contents</h2>
+    <pre id="result"></pre>
+
+    <script>
+      async function pasteText() {
+        const text = await navigator.clipboard.readText();
+        document.querySelector('#result').textContent = text;
+      }
+    </script>
+  </body>
+</html>
